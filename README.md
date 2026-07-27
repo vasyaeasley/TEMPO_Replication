@@ -12,7 +12,6 @@ Based on the scripts in [`scripts/`](scripts/), the pipeline covers the full res
 - **Evaluation & interpretability** — temporal holdout and diurnal-cycle evaluation (`run_temporal_holdout.py`, `run_diurnal_cycle_evaluation.py`), extreme-episode stress tests (`run_extreme_episode_test.py`), feature ablation (`run_ablation_study.py`), and game-theoretic **SHAP** feature importance (`run_shap_analysis.py`).
 - **Visualization** — spatial residual maps, density scatterplots, cluster maps, and diurnal animations (`generate_*` and `plot_*` scripts).
 
-Quick smoke-test entry points live at the repository root: `quick_test_train.py` and `ultra_fast_test.py`.
 
 ## Repository layout
 
@@ -87,13 +86,7 @@ pip install -r requirements.txt
 ```
 
 3. Place required datasets under `data/raw/` and/or `data/processed/`.
-4. Run a smoke test:
-
-```bash
-python quick_test_train.py
-```
-
-5. Reproduce paper analyses, e.g.:
+4. Reproduce paper analyses, e.g.:
 
 ```bash
 python scripts/run_ablation_study.py      # feature ablation chart

@@ -106,7 +106,7 @@ legend = ax.legend(
 legend.get_title().set_fontweight('bold')
 
 # Save exactly like his PNG
-output_png = BASE_DIR / 'epa_stations_2025_replicated.png'
+output_png = BASE_DIR / 'models' / 'epa_stations_2025_replicated.png'
 plt.tight_layout()
 plt.savefig(output_png, dpi=300)
 print(f"Success! Graph saved to {output_png}")
