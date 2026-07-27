@@ -1,0 +1,45 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+plume_env/
+tempo_env/
+
+# Logs and runtime output
+*.log
+
+# Model checkpoints and generated artifacts
+models/**/*.pth
+models/**/*.pt
+models/**/*.ckpt
+models/**/*.joblib
+models/**/*.json
+models/**/*.npz
+output/
+
+# Large geospatial/scientific datasets
+*.nc
+*.h5
+*.he5
+*.grib
+*.tif
+*.tiff
+*.zip
+*.tar
+*.gz
+
+# Local datasets (keep scripts, exclude data payloads)
+data/raw/**
+data/processed/**
+!data/raw/**/.gitkeep
+!data/processed/**/.gitkeep
+
+# OS/editor
+.DS_Store
+.vscode/
