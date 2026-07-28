@@ -7,6 +7,11 @@
 
 This project bridges **NASA TEMPO** geostationary satellite telemetry with **EPA AQS** (Air Quality System) surface ground monitors across Southern California (2023–2024) to resolve the daytime photochemical volatility of nitrogen dioxide (**NO₂**). It builds and benchmarks an advanced machine-learning nowcasting architecture ("digital twin") that predicts ground-level NO₂ during the satellite's active daylight observation window, where simple linear weather models break down.
 
+> 🧭 **New to analyzing this data — or want to brainstorm your own ideas instead of always asking an LLM?**
+> See [**docs/ANALYSIS_METHODOLOGY.md**](docs/ANALYSIS_METHODOLOGY.md) — *The Analyst's Playbook*: a
+> repeatable process for generating your own questions, spotting the "unknown data" you're missing, and
+> running experiments on this dataset like a scientist.
+
 ---
 
 ## 1. The Core Scientific Thesis (The "Why")
@@ -67,6 +72,10 @@ TEMPO_Replication/
 │                                                       # plots, parity scatter plots, and
 │                                                       # presentation-ready comparison tables
 ├── graphs_for_paper/                                   # Publication-ready figures
+├── docs/
+│   └── ANALYSIS_METHODOLOGY.md                         # The Analyst's Playbook: how to
+│                                                       # brainstorm questions & do science
+│                                                       # on this dataset
 ├── requirements.txt
 └── README.md
 ```
