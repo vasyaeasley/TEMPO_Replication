@@ -1,0 +1,24 @@
+import os
+# Strict thread-safety controls
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+
+import numpy as np
+
+npz_path = "/mnt/data3/veasl001/TEMPO_Replication/data/processed/epa_point_dataset_14months_20features.npz"
+data = np.load(npz_path, allow_pickle=True)
+
+print("=== 20 FEATURE NAMES ===")
+for i, name in enumerate(data['feature_names']):
+    print(f"Feature {i:02d}: {name}")
+
+print("\n=== GROUPS METADATA ===")
+print(f"groups_train shape: {data['groups_train'].shape}")
+print(f"Unique values in groups_train: {len(np.unique(data['groups_train']))}")
+print(f"Sample groups_train values: {data['groups_train'][:15]}")
+
+print(f"\ngroups_test shape: {data['groups_test'].shape}")
+print(f"Unique values in groups_test: {len(np.unique(data['groups_test']))}")
+print(f"Sample groups_test values: {data['groups_test'][:15]}")
